@@ -1,0 +1,66 @@
+ncvlog(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+            init_inputs();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,73|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,95|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,160|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,174|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,197|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,216|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,237|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,251|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,268|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,294|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,310|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,322|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,375|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,384|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,410|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,420|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,435|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,446|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,462|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+            apply_reset();
+                        |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,473|24): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+        apply_reset();
+                    |
+ncvlog: *W,TMTPAR (/home/sameer25145/Desktop/CAC_Project/TEST_BENCH/Test3/test3.v,504|20): A task enable with no arguments must not include an empty set of parentheses [10.2.2 (IEEE Std 1364-2005)].  The compiler has ignored the parentheses.  Use 'nchelp ncvlog TMTPAR'  for further information.
+ncvlog: Memory Usage - 21.4M program + 27.6M data = 49.0M total
+ncvlog: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.0s, 64.6% cpu)

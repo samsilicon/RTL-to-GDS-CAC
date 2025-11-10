@@ -1,0 +1,19 @@
+// Conformal LEC Script for CAC - Minimum Area (Final Corrected)
+
+set log file lec_min_area.log -replace
+read library -verilog ../../LIB/slow.v -both
+
+read design -verilog ../../RTL/cac.v -golden
+read design -verilog ../../SYNTHESIS/min_area/reports/cac_netlist_minarea.v -revised
+
+// --- FIX: Handle Constant Flip-Flops ---
+// This command tells the tool to not fail if it finds a flip-flop
+// that has been optimized into a constant 0 or 1.
+set flatten model -seq_constant -both
+
+set system mode lec
+add compared points -all
+compare
+report verification
+
+

@@ -1,0 +1,17 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.10-p003_1, built Wed Apr 29 15:56:37 PDT 2020
+Options:	-nowin 
+Date:		Fri Oct 10 04:26:09 2025
+Host:		edatools-server2.iiitd.edu.in (x86_64 w/Linux 2.6.32-754.35.1.el6.x86_64) (18cores*72cpus*Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz 39936KB)
+OS:		Red Hat Enterprise Linux Server release 6.10 (Santiago)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.1	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (1033 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_65299_2i2kKE'.
+
+*** Memory Usage v#1 (Current mem = 557.246M, initial mem = 273.305M) ***

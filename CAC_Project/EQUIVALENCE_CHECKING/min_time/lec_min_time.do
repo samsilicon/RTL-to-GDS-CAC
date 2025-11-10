@@ -1,0 +1,20 @@
+// Conformal LEC Script for CAC - Minimum Time
+
+set log file lec_min_time.log -replace
+read library -verilog ../../LIB/slow.v -both
+
+read design -verilog ../../RTL/cac.v -golden
+
+// Read the 'min_time' synthesized netlist
+read design -verilog ../../SYNTHESIS/min_time/reports/cac_netlist_mintime.v -revised
+
+// --- FIX: Handle Constant Flip-Flops ---
+// This command is essential to handle optimizations made by the synthesis tool.
+set flatten model -seq_constant -both
+
+set system mode lec
+add compared points -all
+compare
+report verification
+
+

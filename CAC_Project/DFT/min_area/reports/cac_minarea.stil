@@ -1,0 +1,161 @@
+STIL 1.0 { Design 2005; } 
+Header {
+    Title "CTL for design 'collision_avoidance_car'";
+    Date  "Fri Oct 10 05:19:47 IST 2025";
+    Source "Cadence Design Systems Genus 19.13-s073_1 STIL output";
+}
+Signals {
+    "clk" In; "rst" In; "front_obstacle_detected" In;  
+    "left_obstacle_detected" In; "right_obstacle_detected" In; "front_obstacle_slow" In; "lane_clear_left" In;  
+    "lane_clear_right" In; "destination_reached" In; "speed_limit_zone[1]" In; "speed_limit_zone[0]" In;  
+    "scan_en" In; "test_mode" In; "DFT_sdi_1" In;  
+ 
+    "acceleration[1]" Out; "acceleration[0]" Out; "steering[1]" Out;  
+    "steering[0]" Out; "indicators[1]" Out; "indicators[0]" Out; "current_speed_out[7]" Out;  
+    "current_speed_out[6]" Out; "current_speed_out[5]" Out; "current_speed_out[4]" Out; "current_speed_out[3]" Out;  
+    "current_speed_out[2]" Out; "current_speed_out[1]" Out; "current_speed_out[0]" Out; "distance_travelled_out[31]" Out;  
+    "distance_travelled_out[30]" Out; "distance_travelled_out[29]" Out; "distance_travelled_out[28]" Out; "distance_travelled_out[27]" Out;  
+    "distance_travelled_out[26]" Out; "distance_travelled_out[25]" Out; "distance_travelled_out[24]" Out; "distance_travelled_out[23]" Out;  
+    "distance_travelled_out[22]" Out; "distance_travelled_out[21]" Out; "distance_travelled_out[20]" Out; "distance_travelled_out[19]" Out;  
+    "distance_travelled_out[18]" Out; "distance_travelled_out[17]" Out; "distance_travelled_out[16]" Out; "distance_travelled_out[15]" Out;  
+    "distance_travelled_out[14]" Out; "distance_travelled_out[13]" Out; "distance_travelled_out[12]" Out; "distance_travelled_out[11]" Out;  
+    "distance_travelled_out[10]" Out; "distance_travelled_out[9]" Out; "distance_travelled_out[8]" Out; "distance_travelled_out[7]" Out;  
+    "distance_travelled_out[6]" Out; "distance_travelled_out[5]" Out; "distance_travelled_out[4]" Out; "distance_travelled_out[3]" Out;  
+    "distance_travelled_out[2]" Out; "distance_travelled_out[1]" Out; "distance_travelled_out[0]" Out; "total_power_consumed_out[31]" Out;  
+    "total_power_consumed_out[30]" Out; "total_power_consumed_out[29]" Out; "total_power_consumed_out[28]" Out; "total_power_consumed_out[27]" Out;  
+    "total_power_consumed_out[26]" Out; "total_power_consumed_out[25]" Out; "total_power_consumed_out[24]" Out; "total_power_consumed_out[23]" Out;  
+    "total_power_consumed_out[22]" Out; "total_power_consumed_out[21]" Out; "total_power_consumed_out[20]" Out; "total_power_consumed_out[19]" Out;  
+    "total_power_consumed_out[18]" Out; "total_power_consumed_out[17]" Out; "total_power_consumed_out[16]" Out; "total_power_consumed_out[15]" Out;  
+    "total_power_consumed_out[14]" Out; "total_power_consumed_out[13]" Out; "total_power_consumed_out[12]" Out; "total_power_consumed_out[11]" Out;  
+    "total_power_consumed_out[10]" Out; "total_power_consumed_out[9]" Out; "total_power_consumed_out[8]" Out; "total_power_consumed_out[7]" Out;  
+    "total_power_consumed_out[6]" Out; "total_power_consumed_out[5]" Out; "total_power_consumed_out[4]" Out; "total_power_consumed_out[3]" Out;  
+    "total_power_consumed_out[2]" Out; "total_power_consumed_out[1]" Out; "total_power_consumed_out[0]" Out; "DFT_sdo_1" Out;  
+}
+SignalGroups {
+  // ... no bidirectional signals found
+  "all_inputs" = ' "clk" + "rst" + "front_obstacle_detected" +  
+    "left_obstacle_detected" + "right_obstacle_detected" + "front_obstacle_slow" + "lane_clear_left" +  
+    "lane_clear_right" + "destination_reached" + "speed_limit_zone[1]" + "speed_limit_zone[0]" +  
+    "scan_en" + "test_mode" + "DFT_sdi_1" '; // #signals=14
+  "all_outputs" = ' "acceleration[1]" + "acceleration[0]" + "steering[1]" +  
+    "steering[0]" + "indicators[1]" + "indicators[0]" + "current_speed_out[7]" +  
+    "current_speed_out[6]" + "current_speed_out[5]" + "current_speed_out[4]" + "current_speed_out[3]" +  
+    "current_speed_out[2]" + "current_speed_out[1]" + "current_speed_out[0]" + "distance_travelled_out[31]" +  
+    "distance_travelled_out[30]" + "distance_travelled_out[29]" + "distance_travelled_out[28]" + "distance_travelled_out[27]" +  
+    "distance_travelled_out[26]" + "distance_travelled_out[25]" + "distance_travelled_out[24]" + "distance_travelled_out[23]" +  
+    "distance_travelled_out[22]" + "distance_travelled_out[21]" + "distance_travelled_out[20]" + "distance_travelled_out[19]" +  
+    "distance_travelled_out[18]" + "distance_travelled_out[17]" + "distance_travelled_out[16]" + "distance_travelled_out[15]" +  
+    "distance_travelled_out[14]" + "distance_travelled_out[13]" + "distance_travelled_out[12]" + "distance_travelled_out[11]" +  
+    "distance_travelled_out[10]" + "distance_travelled_out[9]" + "distance_travelled_out[8]" + "distance_travelled_out[7]" +  
+    "distance_travelled_out[6]" + "distance_travelled_out[5]" + "distance_travelled_out[4]" + "distance_travelled_out[3]" +  
+    "distance_travelled_out[2]" + "distance_travelled_out[1]" + "distance_travelled_out[0]" + "total_power_consumed_out[31]" +  
+    "total_power_consumed_out[30]" + "total_power_consumed_out[29]" + "total_power_consumed_out[28]" + "total_power_consumed_out[27]" +  
+    "total_power_consumed_out[26]" + "total_power_consumed_out[25]" + "total_power_consumed_out[24]" + "total_power_consumed_out[23]" +  
+    "total_power_consumed_out[22]" + "total_power_consumed_out[21]" + "total_power_consumed_out[20]" + "total_power_consumed_out[19]" +  
+    "total_power_consumed_out[18]" + "total_power_consumed_out[17]" + "total_power_consumed_out[16]" + "total_power_consumed_out[15]" +  
+    "total_power_consumed_out[14]" + "total_power_consumed_out[13]" + "total_power_consumed_out[12]" + "total_power_consumed_out[11]" +  
+    "total_power_consumed_out[10]" + "total_power_consumed_out[9]" + "total_power_consumed_out[8]" + "total_power_consumed_out[7]" +  
+    "total_power_consumed_out[6]" + "total_power_consumed_out[5]" + "total_power_consumed_out[4]" + "total_power_consumed_out[3]" +  
+    "total_power_consumed_out[2]" + "total_power_consumed_out[1]" + "total_power_consumed_out[0]" + "DFT_sdo_1" '; // #signals=79
+  "all_ports" =  ' "all_inputs"+ "all_outputs" '; // #signals=93
+  "_pi" = '"all_inputs"'; // #signals=14
+  "_po" = '"all_outputs"'; // #signals=79
+  "_si" = '"DFT_sdi_1"'; // #signals=1
+  "_so" = '"DFT_sdo_1"'; // #signals=1
+}
+ScanStructures {
+    ScanChain "AutoChain_1" {
+      ScanLength 189;
+     ScanIn "DFT_sdi_1" ; 
+     ScanOut "DFT_sdo_1" ; 
+     ScanEnable "scan_en";
+     ScanMasterClock "clk";
+    }
+}
+Timing {
+    WaveformTable "_default_WFT_" { 
+      Period '50ns';
+      Waveforms {
+       "all_inputs" { 0 {  '0ns' D; } } 
+       "all_inputs" { 1 {  '0ns' U; } } 
+       "all_inputs" { Z {  '0ns' Z; } } 
+       "all_inputs" { N {  '0ns' N; } } 
+       "all_outputs" { X {  '0ns' X; } } 
+       "all_outputs" { H {  '0ns' X; '20ns' H; } } 
+       "all_outputs" { T {  '0ns' X; '20ns' T; } } 
+       "all_outputs" { L {  '0ns' X; '20ns' L; } } 
+       "clk" { P {  '0ns' D; '25ns' U; '45ns' D; } } 
+       "rst" { P {  '0ns' D; '25ns' U; '45ns' D; } } 
+    }
+  }
+}
+//PatternBurst "__burst__" {
+//  PatList {
+//    "__pattern__" {
+//    }
+//  }
+//}
+//PatternExec {
+//    Timing "";
+//    PatternBurst "__burst__";
+//}
+Procedures {
+    "load_unload" {
+        W "_default_WFT_";
+        V {
+          "clk"=0; 
+          "scan_en"=1; 
+          "test_mode"=1; 
+          "rst"=0; 
+          }
+        Shift {
+          W "_default_WFT_";
+          V {
+         "_si"=#; "_so"=#;
+            "clk"=P; 
+            "scan_en"=1; 
+            "test_mode"=1; 
+            "rst"=0; 
+}
+        }
+    }
+    "capture" {
+        W "_default_WFT_";
+        F { 
+             "test_mode"=1; 
+          }
+        V { "_pi"=\r14 #; "_po"=\r79 #; }
+    }
+    "capture_clk" {
+        W "_default_WFT_";
+        F { 
+            "test_mode"=1; 
+        }
+        "forcePI": V { "_pi"=\r14 #; }
+        "measurePO": V { "_po"=\r79 #; }
+        "pulse": V { "clk"=P; }
+    }
+    "capture_rst" {
+        W "_default_WFT_";
+        F { 
+            "test_mode"=1; 
+        }
+        "forcePI": V { "_pi"=\r14 #; }
+        "measurePO": V { "_po"=\r79 #; }
+        "pulse": V { "rst"=P; }
+    }
+}
+MacroDefs {
+    "test_setup" {
+        W "_default_WFT_";
+        V { 
+            "clk" =0; 
+           }
+      // If required, add your test_controller specific initilization vectors here
+        V { 
+          "clk" =0; 
+          "test_mode" = 1; 
+          "rst" = 0; 
+        }
+    }
+}

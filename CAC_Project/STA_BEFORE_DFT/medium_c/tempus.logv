@@ -1,0 +1,29 @@
+[10/10 04:26:09      0s] 
+[10/10 04:26:09      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[10/10 04:26:09      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[10/10 04:26:09      0s] 
+[10/10 04:26:09      0s] Version:	v20.10-p003_1, built Wed Apr 29 15:56:37 PDT 2020
+[10/10 04:26:09      0s] Options:	-nowin 
+[10/10 04:26:09      0s] Date:		Fri Oct 10 04:26:09 2025
+[10/10 04:26:09      0s] Host:		edatools-server2.iiitd.edu.in (x86_64 w/Linux 2.6.32-754.35.1.el6.x86_64) (18cores*72cpus*Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz 39936KB)
+[10/10 04:26:09      0s] OS:		Red Hat Enterprise Linux Server release 6.10 (Santiago)
+[10/10 04:26:09      0s] 
+[10/10 04:26:09      0s] License:
+[10/10 04:26:09      0s] 		tpsxl	Tempus Timing Signoff Solution XL	20.1	checkout succeeded
+[10/10 04:26:09      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[10/10 04:26:16      7s] @(#)CDS: Tempus Timing Signoff Solution v20.10-p003_1 (64bit) 04/29/2020 15:56 (Linux 2.6.32-431.11.2.el6.x86_64)
+[10/10 04:26:16      7s] @(#)CDS: NanoRoute 20.10-p003_1 NR200413-0234/20_10-UB (database version 18.20.505) {superthreading v1.69}
+[10/10 04:26:16      7s] @(#)CDS: AAE 20.10-p005 (64bit) 04/29/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[10/10 04:26:16      7s] @(#)CDS: CTE 20.10-p005_1 () Apr 14 2020 09:14:28 ( )
+[10/10 04:26:16      7s] @(#)CDS: SYNTECH 20.10-b004_1 () Mar 12 2020 22:18:21 ( )
+[10/10 04:26:16      7s] @(#)CDS: CPE v20.10-p006
+[10/10 04:26:16      7s] @(#)CDS: OA 22.60-p028 Tue Dec  3 14:08:48 2019
+[10/10 04:26:16      7s] @(#)CDS: SGN 19.10-d001 (24-May-2019) (64 bit executable, Qt5.9.0)
+[10/10 04:26:16      7s] @(#)CDS: RCDB 11.15.0
+[10/10 04:26:16      7s] @(#)CDS: STYLUS 20.10-p002_1 (03/12/2020 10:11 PDT)
+[10/10 04:26:16      7s] Change the soft stacksize limit to 0.2%RAM (1033 mbytes). Set global soft_stack_size_limit to change the value.
+[10/10 04:26:16      7s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_65299_2i2kKE'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_65299_2i2kKE'.
+[10/10 04:26:25      7s] 
+[10/10 04:26:25      7s] *** Memory Usage v#1 (Current mem = 557.246M, initial mem = 273.305M) ***

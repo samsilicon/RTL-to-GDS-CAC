@@ -1,0 +1,106 @@
+                          CONFORMAL (R)
+                   Version 20.10-p100 (01-May-2020) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2019. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 1988 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 0.40    seconds
+Elapse time  : 17      seconds
+Memory usage : 250.61  M bytes
+// Command: read library -verilog ../../LIB/slow.v -both
+// Parsing file ../../LIB/slow.v ...
+// Warning: (RTL7.2) Gate or transistor primitive is using weak attributes (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:196)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:84)
+// Warning: (VLG5.2) Primitive input port has multiple bits. Ignore all but LSB bit (occurrence:2)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:480)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:960)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:1)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 0.60    seconds
+Elapse time  : 17      seconds
+Memory usage : 272.56  M bytes
+// Command: read design -verilog ../../RTL/cac.v -golden
+// Parsing file ../../RTL/cac.v ...
+// Golden root module is set to 'collision_avoidance_car'
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:4)
+// Note: Read VERILOG design successfully
+// Command: read design -verilog ../../SYNTHESIS/min_time/reports/cac_netlist_mintime.v -revised
+// Parsing file ../../SYNTHESIS/min_time/reports/cac_netlist_mintime.v ...
+// Revised root module is set to 'collision_avoidance_car'
+// Warning: (RTL2.2) Variable is referenced but never assigned (occurrence:4)
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:4)
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:2)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:4)
+// Warning: There are 1 undriven nets in Revised
+// Warning: There are 1 undriven pins in Revised
+// Note: Read VERILOG design successfully
+// Command: set flatten model -seq_constant -both
+// Command: set system mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// Processing Revised ...
+// Modeling Revised ...
+// Balanced modeling (auto) mapped 378 out of 381 DFF/DLATs
+// (F18) Converted 3 DFF/DLAT(s) in (G) to ZERO/ONE
+// (F28) Converted 1 internal output port(s) to inout port(s)
+CPU time     : 0.83    seconds
+Elapse time  : 17      seconds
+Memory usage : 315.39  M bytes
+// Warning: Golden and Revised have different numbers of key points:
+// Golden  key points = 281
+// Revised key points = 278
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            11     78     189       278     
+--------------------------------------------------------------------------------
+Revised           11     78     189       278     
+================================================================================
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Unreachable       3         3       
+================================================================================
+// Command: add compared points -all
+// 267 compared points added to compare list
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           78     189       267     
+================================================================================
+CPU time     : 1.34    seconds
+Elapse time  : 18      seconds
+Memory usage : 340.32  M bytes
+// Command: report verification
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  0
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+================================================================================

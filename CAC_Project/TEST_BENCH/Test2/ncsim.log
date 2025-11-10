@@ -1,0 +1,167 @@
+ncsim(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm collision_avoidance_car_tb.dut.acceleration collision_avoidance_car_tb.dut.clk collision_avoidance_car_tb.dut.current_speed collision_avoidance_car_tb.dut.current_speed_out collision_avoidance_car_tb.dut.current_state collision_avoidance_car_tb.dut.destination_reached collision_avoidance_car_tb.dut.destination_reached_reg collision_avoidance_car_tb.dut.distance_travelled collision_avoidance_car_tb.dut.distance_travelled_out collision_avoidance_car_tb.dut.front_obstacle_detected collision_avoidance_car_tb.dut.front_obstacle_history collision_avoidance_car_tb.dut.front_obstacle_slow collision_avoidance_car_tb.dut.front_obstacle_slow_reg collision_avoidance_car_tb.dut.indicators collision_avoidance_car_tb.dut.instantaneous_power collision_avoidance_car_tb.dut.integral_error_accumulator collision_avoidance_car_tb.dut.lane_clear_left collision_avoidance_car_tb.dut.lane_clear_left_reg collision_avoidance_car_tb.dut.lane_clear_right collision_avoidance_car_tb.dut.lane_clear_right_reg collision_avoidance_car_tb.dut.left_obstacle_detected collision_avoidance_car_tb.dut.left_obstacle_history collision_avoidance_car_tb.dut.next_acceleration collision_avoidance_car_tb.dut.next_indicators collision_avoidance_car_tb.dut.next_state collision_avoidance_car_tb.dut.next_steering collision_avoidance_car_tb.dut.persistent_front_obstacle collision_avoidance_car_tb.dut.persistent_left_obstacle collision_avoidance_car_tb.dut.persistent_right_obstacle collision_avoidance_car_tb.dut.right_obstacle_detected collision_avoidance_car_tb.dut.right_obstacle_history collision_avoidance_car_tb.dut.rst collision_avoidance_car_tb.dut.signed_speed_error collision_avoidance_car_tb.dut.speed_error collision_avoidance_car_tb.dut.speed_is_zero collision_avoidance_car_tb.dut.speed_limit collision_avoidance_car_tb.dut.speed_limit_zone collision_avoidance_car_tb.dut.speed_limit_zone_reg collision_avoidance_car_tb.dut.steering collision_avoidance_car_tb.dut.target_speed collision_avoidance_car_tb.dut.target_speed_reached collision_avoidance_car_tb.dut.throttle_value collision_avoidance_car_tb.dut.total_power_consumed collision_avoidance_car_tb.dut.total_power_consumed_out
+Created probe 1
+ncsim> run
+========================================
+  ULTRA TOGGLE COVERAGE TESTBENCH
+========================================
+
+[TEST 1] Input Toggle Storm - 50x Each
+  Completed 50x toggle cycles
+
+[TEST 2] All 256 Input Combinations x5
+  All 256 combinations tested 5 times
+
+[TEST 3] Speed Counter Full Range
+  Cycle 1 max speed: 108
+  Cycle 2 min speed: 108
+  Cycle 3 speed:  36
+  Cycle 4 speed:  36
+  Cycle 5 speed:  36
+  Speed toggled through full range
+
+[TEST 4] Distance Counter Full Range
+  Distance after 3000 cycles:     323163
+  Distance after 6000 cycles:     647163
+  Distance counter exercised
+
+[TEST 5] Power Counter Full Range
+  Power after 9000 total cycles:      90000
+  Power counter exercised
+
+[TEST 6] State Register Bit Toggles - 10x Each State
+  All states visited 10 times
+
+[TEST 7] Registered Input Toggles - 100x
+  Registered inputs toggled 100 times
+
+[TEST 8] Obstacle History All Patterns
+  All 512 history patterns tested
+
+[TEST 9] Output Signal Toggles - 20x Each Value
+  All outputs toggled 20 times
+
+[TEST 10] Reset Toggle - 50x
+  Reset toggled 50 times
+
+[TEST 11] Throttle Value Toggles - 20x Each
+  All throttle values tested 20 times
+
+[TEST 12] Speed Comparator Toggles - 30x
+  Comparators toggled 30 times
+
+[TEST 13] Integral Accumulator Toggles - 25x
+  Accumulator toggled 25 times
+
+[TEST 14] Extreme Long Run - 10000 Cycles
+  Progress:           1000 cycles, Speed=108, Dist=    107163, Power=     90000
+  Progress:           2000 cycles, Speed=108, Dist=    215163, Power=     90000
+  Progress:           3000 cycles, Speed=108, Dist=    323163, Power=     90000
+  Progress:           4000 cycles, Speed=108, Dist=    431163, Power=     90000
+  Progress:           5000 cycles, Speed=108, Dist=    539163, Power=     90000
+  Progress:           6000 cycles, Speed=108, Dist=    647163, Power=     90000
+  Progress:           7000 cycles, Speed=108, Dist=    755163, Power=     90000
+  Progress:           8000 cycles, Speed=108, Dist=    863163, Power=     90000
+  Progress:           9000 cycles, Speed=108, Dist=    971163, Power=     90000
+  Progress:          10000 cycles, Speed=108, Dist=   1079163, Power=     90000
+  Long run complete
+
+[TEST 15] Random Chaos - 5000 Cycles
+  Random chaos complete
+
+[TEST 16] Specific Bit Patterns
+  Bit patterns complete
+
+[TEST 17] Final Marathon - 5000 Cycles
+  Marathon complete
+
+
+========================================
+  ULTRA TOGGLE TEST COMPLETE
+========================================
+  Total Tests: 17
+  Final Speed: 66
+  Total Distance: 12840
+  Total Power: 32100
+  Total Cycles: ~35000+
+========================================
+
+Simulation complete via $finish(1) at time 847755 NS + 0
+./test2.v:625         $finish;
+ncsim> coverage -analyze
+coverage model statistics (approx):
+  covergroup instances  :  n/a
+  covergroup types  :  n/a
+  covergroup bins (types + instances)  :  n/a
+  blocks :  596
+  expressions :  52
+  toggle signals :  742
+  fsm states :  20
+  fsm transitions :  38
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  collision_avoidance_car_tb(collision_avoidance_car_tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1f0dfd03_00000000.ucm
+  data               :  ./cov_work/scope/test/icc_1f0dfd03_00000000.ucd
+  cpu                :  0.0s system + 0.0s user = 0.0s total
+
+Launching IMC...
+
+ncsim> coverage -analyze
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  collision_avoidance_car_tb(collision_avoidance_car_tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1f0dfd03_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_1f0dfd03_00000000.ucd
+  cpu                :  0.0s system + 0.0s user = 0.0s total
+
+Launching IMC...
+
+ncsim> coverage -analyze
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  collision_avoidance_car_tb(collision_avoidance_car_tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1f0dfd03_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_1f0dfd03_00000000.ucd
+  cpu                :  0.0s system + 0.0s user = 0.0s total
+
+Launching IMC...
+
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  collision_avoidance_car_tb(collision_avoidance_car_tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1f0dfd03_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_1f0dfd03_00000000.ucd
+  cpu                :  0.0s system + 0.0s user = 0.0s total
+ncsim: Memory Usage - 38.6M program + 196.9M data = 235.5M total (247.3M Peak)
+ncsim: CPU Usage - 7.0s system + 4.8s user = 11.8s total (441.5s, 2.7% cpu)

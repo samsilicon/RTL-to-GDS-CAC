@@ -1,0 +1,39 @@
+                          CONFORMAL (R)
+                   Version 20.10-p100 (01-May-2020) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2019. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 1990 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 0.45    seconds
+Elapse time  : 0       seconds
+Memory usage : 252.49  M bytes
+// Command: read library -verilog ../../LIB/slow.v -both
+// Parsing file ../../LIB/slow.v ...
+// Warning: (RTL7.2) Gate or transistor primitive is using weak attributes (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:196)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:84)
+// Warning: (VLG5.2) Primitive input port has multiple bits. Ignore all but LSB bit (occurrence:2)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:480)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:960)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:1)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 0.66    seconds
+Elapse time  : 1       seconds
+Memory usage : 274.43  M bytes
+// Command: read design -verilog ../../RTL/cac.v -golden
+// Parsing file ../../RTL/cac.v ...
+// Golden root module is set to 'collision_avoidance_car'
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:4)
+// Note: Read VERILOG design successfully
+// Command: read design ./Fail1.v.v -verilog -revised
+// Error: Cannot open file './Fail1.v.v'.
+// Error: FIL1.2: Failed to open file
+//  Design file not found
+// Error: Total 1 error(s) of fail to open file found during read design. Please review parsing message.
+// 'dofile /home/ayushi25107/Desktop/CAC_Project/EQUIVALENCE_CHECKING/Fail1/lec_fail_cec.do' is aborted at line 10

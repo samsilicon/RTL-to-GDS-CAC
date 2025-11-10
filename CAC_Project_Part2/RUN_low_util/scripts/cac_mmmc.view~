@@ -1,0 +1,12 @@
+# --- MMMC View Definition File ---
+# Paths are relative to the 'RUN_low_util' directory
+
+create_library_set -name timing_lib1 -timing {../IN/lib/slow.lib}
+
+create_constraint_mode -name sdc1 -sdc_files {../IN/sdc/cac_constraints_medium_c_scan.sdc}
+
+create_delay_corner -name delay1 -early_library_set {timing_lib1} -late_library_set {timing_lib1}
+
+create_analysis_view -name view1 -constraint_mode {sdc1} -delay_corner {delay1}
+
+set_analysis_view -setup {view1} -hold {view1}

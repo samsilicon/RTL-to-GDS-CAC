@@ -1,0 +1,5 @@
+csh
+source /cadence/cshrc
+innovus
+source run_low_util.tcl (for running 0.5 utlisation)
+source run_high_util.tcl (for running 0.8 utlisation)

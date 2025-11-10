@@ -1,0 +1,264 @@
+ncsim(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> ^C
+ncsim> exit
+ncsim: *E,C58EXE: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+ncsim: *E,C58EXE: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+ncsim: Memory Usage - 38.6M program + 165.3M data = 203.9M total (203.9M Peak)
+ncsim: CPU Usage - 2.8s system + 1.3s user = 4.1s total (185.8s, 2.2% cpu)
+b.dut.indicators collision_avoidance_car_tb.dut.instantaneous_power collision_avoidance_car_tb.dut.integral_error_accumulator collision_avoidance_car_tb.dut.lane_clear_left collision_avoidance_car_tb.dut.lane_clear_left_reg collision_avoidance_car_tb.dut.lane_clear_right collision_avoidance_car_tb.dut.lane_clear_right_reg collision_avoidance_car_tb.dut.left_obstacle_detected collision_avoidance_car_tb.dut.left_obstacle_history collision_avoidance_car_tb.dut.next_acceleration collision_avoidance_car_tb.dut.next_indicators collision_avoidance_car_tb.dut.next_state collision_avoidance_car_tb.dut.next_steering collision_avoidance_car_tb.dut.persistent_front_obstacle collision_avoidance_car_tb.dut.persistent_left_obstacle collision_avoidance_car_tb.dut.persistent_right_obstacle collision_avoidance_car_tb.dut.right_obstacle_detected collision_avoidance_car_tb.dut.right_obstacle_history collision_avoidance_car_tb.dut.rst collision_avoidance_car_tb.dut.signed_speed_error collision_avoidance_car_tb.dut.speed_error collision_avoidance_car_tb.dut.speed_is_zero collision_avoidance_car_tb.dut.speed_limit collision_avoidance_car_tb.dut.speed_limit_zone collision_avoidance_car_tb.dut.speed_limit_zone_reg collision_avoidance_car_tb.dut.steering collision_avoidance_car_tb.dut.target_speed collision_avoidance_car_tb.dut.target_speed_reached collision_avoidance_car_tb.dut.throttle_value collision_avoidance_car_tb.dut.total_power_consumed collision_avoidance_car_tb.dut.total_power_consumed_out
+Created probe 1
+ncsim> run
+ncsim: *E,C58EXE: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+========================================
+  100% Coverage Testbench
+  Focus: Toggle + FSM + Expression
+========================================
+
+
+=== SECTION 1: EXHAUSTIVE INPUT TOGGLES ===
+
+[TEST 1] All Input Signal Toggles
+  All inputs toggled individually
+
+[TEST 2] All Input Combinations
+  All input combinations tested
+
+
+=== SECTION 2: COMPLETE FSM COVERAGE ===
+
+[TEST 3] IDLE State
+    State: CRUISE
+[TEST 4] IDLE -> ACCELERATE_FWD
+    State: CRUISE
+[TEST 5] IDLE -> STOPPED
+    State: STOPPED
+[TEST 6] ACCELERATE_FWD State
+    State: CRUISE
+[TEST 7] ACCELERATE_FWD -> CRUISE
+    State: CRUISE
+[TEST 8] ACCELERATE_FWD -> DECELERATE
+    State: DECELERATE
+[TEST 9] ACCELERATE_FWD -> AVOID_OBSTACLE_STOP
+    State: AVOID_OBSTACLE_STOP
+[TEST 10] ACCELERATE_FWD -> STOPPED
+    State: STOPPED
+[TEST 11] CRUISE State
+    State: CRUISE
+[TEST 12] CRUISE -> ACCELERATE_FWD
+    State: CRUISE
+[TEST 13] CRUISE -> DECELERATE
+    State: DECELERATE
+[TEST 14] CRUISE -> AVOID_OBSTACLE_STOP
+    State: AVOID_OBSTACLE_STOP
+[TEST 15] CRUISE -> STOPPED
+    State: STOPPED
+[TEST 16] DECELERATE State
+    State: DECELERATE
+[TEST 17] DECELERATE -> PREPARE_LANE_CHANGE_LEFT
+    State: ACCELERATE_FWD
+[TEST 18] DECELERATE -> PREPARE_LANE_CHANGE_RIGHT
+    State: ACCELERATE_FWD
+[TEST 19] DECELERATE -> ACCELERATE_FWD
+    State: ACCELERATE_FWD
+[TEST 20] DECELERATE -> AVOID_OBSTACLE_STOP
+    State: AVOID_OBSTACLE_STOP
+[TEST 21] PREPARE_LANE_CHANGE_LEFT -> LANE_CHANGE_LEFT
+    State: DECELERATE
+[TEST 22] LANE_CHANGE_LEFT -> ACCELERATE_FWD
+    State: PREPARE_LANE_CHANGE_LEFT
+[TEST 23] PREPARE_LANE_CHANGE_RIGHT -> LANE_CHANGE_RIGHT
+    State: DECELERATE
+[TEST 24] LANE_CHANGE_RIGHT -> ACCELERATE_FWD
+    State: PREPARE_LANE_CHANGE_RIGHT
+[TEST 25] AVOID_OBSTACLE_STOP State
+    State: AVOID_OBSTACLE_STOP
+[TEST 26] AVOID_OBSTACLE_STOP -> IDLE
+    State: CRUISE
+[TEST 27] STOPPED State
+    State: STOPPED
+
+=== SECTION 3: DATAPATH COVERAGE ===
+
+[TEST 28] Speed Ramp - All Bits Toggle
+    Max speed: 108
+[TEST 29] Distance Accumulation - All Bits
+    Distance:     139563
+[TEST 30] Power Accumulation - All Bits
+    Power:      90000
+
+=== SECTION 4: OUTPUT TOGGLES ===
+
+[TEST 31] Acceleration Output All Values
+    accel = 00
+    accel = 10
+    accel = 01
+[TEST 32] Steering Output All Values
+    steering = 00
+    steering = 00
+    steering = 00
+[TEST 33] Indicators Output All Values
+    indicators = 00
+    indicators = 00
+    indicators = 00
+
+=== SECTION 5: REGISTERED INPUT COVERAGE ===
+
+[TEST 34] Input Register Pipeline Toggles
+    All registered inputs toggled
+
+=== SECTION 6: INTERNAL SIGNAL COVERAGE ===
+
+[TEST 35] History Register Patterns
+    All history patterns covered
+[TEST 36] Speed Limit Decoder
+    Speed limit zone 00 ->          30 km/h
+    Speed limit zone 01 ->          60 km/h
+    Speed limit zone 10 ->         100 km/h
+    Speed limit zone 11 ->           0 km/h
+[TEST 37] Throttle Value Coverage
+    All throttle values covered
+[TEST 38] Integral Error Accumulator
+    Positive accumulation
+    Accumulator reset
+[TEST 39] Speed Comparators
+    speed_is_zero = 1
+    speed_is_zero = 0
+    target_speed_reached = 0
+    target_speed_reached = 1
+
+=== SECTION 7: EDGE CASES ===
+
+[TEST 40] FSM Default Case
+    State: UNKNOWN
+    State: ACCELERATE_FWD
+[TEST 41] Reset During Operation
+    Speed before reset: 108
+    Speed after reset:   0
+[TEST 42] All State Bits Toggle
+    All state bits toggled
+
+=== SECTION 8: MAXIMUM TOGGLE STRESS ===
+
+[TEST 43] Rapid Input Changes
+    Random toggles complete
+[TEST 44] All Speed Values 0-255
+    Final speed: 108
+[TEST 45] Distance Counter Full Range
+    Distance:     215163
+[TEST 46] Power Counter Full Range
+    Power:      90000
+
+=== SECTION 9: COMBINATIONAL PATHS ===
+
+[TEST 47] Target Speed Assignment
+    ACCELERATE_FWD: target = 30
+    CRUISE: target maintains
+    LANE_CHANGE_LEFT: target = speed_limit
+    LANE_CHANGE_RIGHT: target = speed_limit
+    PREPARE_LANE_CHANGE: target = current_speed
+    Default states: target = 0
+[TEST 48] Speed Error Calculation
+    Large speed error (>20)
+    Medium speed error (5-20)
+    Small speed error (<5)
+    Zero speed error
+[TEST 49] Persistent Obstacle Logic
+    All persistent obstacle patterns tested
+[TEST 50] Instantaneous Power Calculation
+    All power levels tested
+
+=== SECTION 10: BOUNDARY CONDITIONS ===
+
+[TEST 51] Speed Saturation
+    Max achievable speed: 108
+[TEST 52] Speed Underflow
+    Minimum speed:  66
+[TEST 53] All Output Bit Patterns
+    Output patterns exercised
+
+=== SECTION 11: INTEGRATION SCENARIOS ===
+
+[TEST 54] Complete Drive Cycle
+    Accelerated to 30 km/h
+    Cruising at 60 km/h
+    Changed lane left
+    Changed lane right
+    Emergency stopped
+    Resumed driving
+    Reached destination
+[TEST 55] Multi-Obstacle Scenario
+    All obstacles detected
+    Obstacles cleared sequentially
+[TEST 56] Rapid Speed Limit Changes
+    Rapid speed changes handled
+
+=== SECTION 12: FINAL TOGGLE SWEEP ===
+
+[TEST 57] Exhaustive Multi-Bit Toggles
+    All speed_limit_zone transitions tested
+[TEST 58] Final Long Run
+    Final metrics:
+      Speed: 108
+      Distance:     215163
+      Power:      90000
+
+========================================
+  COMPREHENSIVE COVERAGE TEST COMPLETE
+========================================
+  Total Tests: 58
+  Final Speed: 108
+  Total Distance: 220563
+  Total Power: 90000
+========================================
+
+Simulation complete via $finish(1) at time 260185 NS + 0
+./test1.v:1144         $finish;
+ncsim> coverage -analyze
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  collision_avoidance_car_tb(collision_avoidance_car_tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_33639123_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_33639123_00000000.ucd
+  cpu                :  0.0s system + 0.0s user = 0.0s total
+
+Launching IMC...
+
+ncsim> coverage -analyze
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  collision_avoidance_car_tb(collision_avoidance_car_tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_33639123_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_33639123_00000000.ucd
+  cpu                :  0.0s system + 0.0s user = 0.0s total
+
+Launching IMC...
+
+ncsim> ^C
+ncsim> exit
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  collision_avoidance_car_tb(collision_avoidance_car_tb)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_33639123_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_33639123_00000000.ucd
+  cpu                :  0.0s system + 0.0s user = 0.0s total
+ncsim: Memory Usage - 38.6M program + 197.5M data = 236.1M total (239.7M Peak)
+ncsim: CPU Usage - 2.6s system + 1.8s user = 4.5s total (172.4s, 2.6% cpu)

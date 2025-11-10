@@ -1,0 +1,30 @@
+# --- MMMC View Definition File ---
+
+# Define the file paths again *inside* this script
+# Use paths relative to the 'RUN_low_util' directory
+set lib_files [list ../IN/lib/slow.lib]
+set sdc_in    "../IN/sdc/optimalconstraints.sdc"
+
+# --- Create Library Set ---
+# This is the correct syntax that fixes your error
+create_library_set -name slow_lib_set -library $lib_files
+
+# --- Create RC Corner ---
+create_rc_corner -name rc_worst \
+    -preRoute_res 1.0 -preRoute_cap 1.0 \
+    -postRoute_res 1.0 -postRoute_cap 1.0
+
+# --- Create Delay Corner ---
+create_delay_corner -name dc_slow \
+    -library_set slow_lib_set \
+    -rc_corner rc_worst
+
+# --- Create Constraint Mode ---
+create_constraint_mode -name cm_default -sdc_files $sdc_in
+
+# --- Create Analysis Views ---
+create_analysis_view -name av_slow_setup -constraint_mode cm_default -delay_corner dc_slow
+create_analysis_view -name av_slow_hold  -constraint_mode cm_default -delay_corner dc_slow
+
+# --- Set Analysis Views ---
+set_analysis_view -setup [list av_slow_setup] -hold [list av_slow_hold]

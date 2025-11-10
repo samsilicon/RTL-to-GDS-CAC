@@ -1,0 +1,8 @@
+ncelab(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+ncelab: *W,COVFHT: FSM hold transitions (transitions to the current state) are not extracted for any FSM in default mode.
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+    integer test_num;
+                   |
+ncelab: *W,COVUTA (./test3.v,30|19): Toggle coverage is not supported for SystemVerilog integer, real, string, dynamic array, sparse memory, and array of enum. It is also not supported for VHDL multi-dimensional array and array of record. There may also be other such objects in the design.
+ncelab: Memory Usage - 49.9M program + 37.4M data = 87.3M total (Peak 91.4M)
+ncelab: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.1s, 75.0% cpu)

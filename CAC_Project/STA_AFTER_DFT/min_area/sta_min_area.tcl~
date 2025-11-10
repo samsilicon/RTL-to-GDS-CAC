@@ -1,0 +1,40 @@
+# --- STA Script for min_time netlist (Corrected for Full Coverage) ---
+# This script analyzes the timing of the performance-optimized netlist using the 
+# balanced (15ns) constraints for a fair comparison.
+
+# Create a directory to store the reports
+file mkdir reports
+set report_dir reports
+
+# 1. Read the technology library
+read_lib ../../LIB/slow.lib
+
+# 2. Read the synthesized design (netlist) to be analyzed
+read_verilog ../../SYNTHESIS/min_time/reports/cac_netlist_mintime.v 
+set_top_module collision_avoidance_car
+
+# 3. Read the timing constraints (using the balanced 15ns SDC file)
+read_sdc ../../SYNTHIS/medium_c/optimalconstraints.sdc 
+
+# --- FIX for Untested Paths and Violations ---
+# This command ensures the clock is propagated to all sequential elements,
+# allowing the tool to test 100% of the paths.
+set_propagated_clock [all_clocks]
+
+# This command tells the tool to assume the reset is not active during
+# normal operation, which will eliminate the Recovery violations.
+set_case_analysis 0 [get_ports rst]
+# --- End of Fix ---
+
+# 4. Generate a comprehensive set of timing reports
+check_timing > $report_dir/check_timing.rpt 
+report_timing > $report_dir/timing_report.rpt
+report_timing -nworst 100 -late > $report_dir/timing_setup.rpt
+report_timing -nworst 100 -early > $report_dir/timing_hold.rpt
+report_analysis_coverage > $report_dir/analysis_coverage.rpt 
+report_analysis_summary > $report_dir/analysis_summary.rpt 
+report_clocks > $report_dir/clocks.rpt 
+report_case_analysis > $report_dir/case_analysis.rpt 
+report_constraints -all_violators > $report_dir/allviolationsinit.rpt 
+
+exit

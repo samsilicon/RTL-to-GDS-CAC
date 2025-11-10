@@ -1,0 +1,18 @@
+// Conformal LEC Script for CAC - Medium (Balanced)
+
+set log file lec_medium_c.log -replace
+read library -verilog ../../LIB/slow.v -both
+
+read design -verilog ../../RTL/cac.v -golden
+
+// Read the 'medium_c' (optimal) synthesized netlist
+read design -verilog ../../SYNTHESIS/medium_c/reports/cac_netlist_optimal.v -revised
+
+// --- FIX: Handle Constant Flip-Flops ---
+set flatten model -seq_constant -both
+
+set system mode lec
+add compared points -all
+compare
+report verification
+

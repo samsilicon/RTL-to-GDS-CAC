@@ -1,0 +1,2 @@
+define worklib /home/ayushi25107/Desktop/CAC_Project/TEST_BENCH/Test1/INCA_libs/worklib
+include $CDS_INST_DIR/tools/inca/files/cds.lib
